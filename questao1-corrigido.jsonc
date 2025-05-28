@@ -1,0 +1,65 @@
+// EXEMPLO DE ERROS CORRIGIDOS:
+{
+  "nfeProc": {
+    "NFe": {
+      "infNFe": {
+        "Id": "invoice-395a573b6a4ce33067da653e4abc1731",
+        "ide": {
+          "dhEmi": "2025-04-06T10:00:00-03:00",
+          "dhSaiEnt": "2025-04-06T15:30:00-03:00",
+          "nNF": "4717",
+          "serie": "1"
+        },
+        "emit": {
+          "CNPJ": "61190096000192",
+          "enderEmit": {
+            "CEP": "04581060",
+            "fone": "1150908612",
+            "nro": "525",
+            "UF": "SP",
+            "xBairro": "VILA CORDEIRO",
+            "xLgr": "RUA PASCOAL PAIS",
+            "xMun": "SAO PAULO",
+            "xPais": "BRASIL"
+          },
+          "xNome": "EUROFARMA",
+          "xFant": "Eurofarma"
+        },
+        "dest": {
+          "CNPJ": "44726537000109",
+          "enderDest": {
+            "CEP": "13650007",
+            "fone": "0000000000",
+            "nro": "S/N",
+            "UF": "SP",
+            "xBairro": "CENTRO",
+            "xLgr": "AVENIDA XV DE NOVEMBRO",
+            "xMun": "SANTA CRUZ DAS PALMEIRAS",
+            "xPais": "BRASIL"
+          },
+          "xNome": "DROGARIA TOTAL - UNIDADE AVENIDA",
+          "xFant": "DROGARIA TOTAL - UNIDADE AVENIDA"
+        }
+      },
+      "det": [
+        {
+          "nItem": "1",
+          "prod": {
+            "cEAN": "007891317010898",
+            "cEANTrib": "007891317010898",
+            "CFOP": "5102",
+            "cProd": "MTOR CPR 1.0 G  X 90",
+            "qCom": "1.0",
+            "qTrib": "1.0",
+            "uCom": "UN",
+            "uTrib": "UN",
+            "vUnCom": "250.85",
+            "vUnTrib": "250.85",
+            "vProd": "250.85",
+            "xProd": "MTOR CPR 1.0 G  X 90"
+          }
+        }
+      ]
+    }
+  }
+}

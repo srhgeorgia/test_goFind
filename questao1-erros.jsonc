@@ -1,0 +1,104 @@
+// Exemplo da NF com erros corrigidos (incluindo "localização" de campos)
+{
+  "nfeProc": {
+    "NFe": {
+      "infNFe": {
+        "Id": "invoice-395a573b6a4ce33067da653e4abc1731", // opcional, mas preferível que tenha - estava mais abaixo
+        "ide": {
+          "dhEmi": "2025-04-06",
+          // ❌ errado: deve ser data e hora no formato ISO 8601 com horário
+          // Exemplo correto: "2025-04-06T10:00:00-03:00"
+          "dhSaiEnt": "S",
+          // ❌ errado: deve ser data e hora ISO 8601
+          // Exemplo correto: "2025-04-06T15:30:00-03:00"
+          "nNF": "2025-04-060000004717",
+          // ❌ errado: deve ser string numerica, até 9 dígitos
+          // Exemplo correto: "4717"
+          "serie": "UNICA"
+          // ❌ errado: deve ser string numerica
+          // Exemplo correto: "1"
+        },
+        "emit": {
+          "CNPJ": "61190096000192", // ✅ correto
+          "enderEmit": {
+            "CEP": "04581-060",
+            // ❌ errado: só números, sem formatação
+            // Exemplo correto: "04581060"
+            "fone": "(11) 5090-8612",
+            // ❌ errado: só números, sem formatação
+            // Exemplo correto: "1150908612"
+            "nro": "525", // ✅ correto
+            "UF": "SP", // ✅ correto
+            "xBairro": "VILA CORDEIRO", // ✅ correto
+            // "xCpl": "", // opcional
+            "xLgr": "RUA PASCOAL PAIS", // ✅ correto
+            "xMun": "SAO PAULO", // ✅ correto
+            "xPais": "BRASIL" // ✅ correto
+          },
+          // "IE": "", // opcional
+          "xNome": "EUROFARMA", // ✅ correto
+          "xFant": "Eurofarma" // ✅ correto
+        },
+        "dest": {
+          "CNPJ": "44726537000109", // ✅ correto - Obrigatório para lojas no Brasil.
+          // "RUC": "", //  opcional - Obrigatório para lojas em paises LATAM (Argentina, Chile, México, etc).
+          // "email": "ok", // opcional
+          "enderDest": {
+            "CEP": "13650007", // ✅ correto
+            "fone": "(00) 0000-0000",
+            // ❌ errado: só números, sem formatação
+            // Exemplo correto: "0000000000"
+            "nro": "NA",
+            // ❌ errado: deve ser número ou "S/N"
+            // Exemplo correto: "S/N"
+            "UF": "SP", // ✅ correto
+            "xBairro": "CENTRO", // ✅ correto
+            // "xCpl": "", // opcional
+            "xLgr": "AVENIDA XV DE NOVEMBRO,940",
+            // ❌ errado: número deve ficar em 'nro', aqui só o logradouro
+            // Exemplo correto: "AVENIDA XV DE NOVEMBRO"
+            "xMun": "SANTA CRUZ DAS PALMEIRAS", // ✅ correto
+            "xPais": "BRASIL" // ✅ correto
+          },
+          // "IE": "", // opcional
+          "xNome": "DROGARIA TOTAL - UNIDADE AVENIDA", // ✅ correto
+          "xFant": "DROGARIA TOTAL - UNIDADE AVENIDA" // ✅ correto
+        } // Informações do endereço de entrega, quando o mesmo for diferente do endereço de cobrança
+        // "entrega": { 
+        //   "CEP": "", obrigatorio
+        //   "fone": "",
+        //   "nro": "", obrigatorio
+        //   "UF": "",
+        //   "xBairro": "", obrigatorio
+        //   "xCpl": "",
+        //   "xLgr": "",
+        //   "xMun": "", obrigatorio
+        //   "xPais": ""
+      },
+      "det": [
+        {
+          "nItem": "1", // ✅ correto
+          "prod": {
+            "cEAN": "007891317010898", // ✅ correto
+            "cEANTrib": "007891317010898", // ✅ correto
+            "CFOP": "5102", // ✅ correto - estava mais abaixo
+            "cProd": "MTOR CPR 1.0 G  X 90", // ✅ correto
+            // "NCM": "", // opcional
+            "qCom": "1.0", // ✅ correto
+            "qTrib": "1.0", // ✅ correto
+            "uCom": " ",
+            // ❌ errado: deve ser unidade válida, não pode ser vazio, ex: "UN" - estava mais abaixo
+            // Exemplo correto: "UN"
+            "uTrib": " ",
+            // ❌ errado: deve ser unidade válida, não pode ser vazio - estava mais abaixo
+            // Exemplo correto: "UN"
+            "vUnCom": "250.85", // ✅ correto
+            "vUnTrib": "250.85", // ✅ correto
+            "vProd": "250.85", // ✅ correto
+            "xProd": "MTOR CPR 1.0 G  X 90" // ✅ correto
+          }
+        }
+      ]
+    }
+  }
+}
