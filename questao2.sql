@@ -9,8 +9,7 @@ FROM
   Orders AS o
   INNER JOIN Customers AS c ON o.CustomerID = c.CustomerID
   INNER JOIN OrderDetails AS od ON o.OrderId = od.OrderID
-WHERE
-  YEAR (o.OrderDate) = 2012
+WHERE YEAR(o.OrderDate) = 2012
 GROUP BY
   o.OrderId,
   o.OrderDate,
