@@ -42,7 +42,7 @@
         "dest": {
           "CNPJ": "44726537000109", // ✅ correto - Obrigatório para lojas no Brasil.
           // "RUC": "", //  opcional - Obrigatório para lojas em paises LATAM (Argentina, Chile, México, etc).
-          // "email": "ok", // opcional
+          // "email": "", // opcional
           "enderDest": {
             "CEP": "13650007", // ✅ correto
             "fone": "(00) 0000-0000",
